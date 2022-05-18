@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lineales.dinamica;
+package lineales.dinamicas;
 
 /**
  *
@@ -15,7 +15,7 @@ public class Nodo {
     private Nodo enlace;
     
     //contructor
-    public Nodo(Object elem, Nodo enlance){
+    public Nodo(Object elem, Nodo enlace){
         this.elem = elem;
         this.enlace = enlace;
     }
