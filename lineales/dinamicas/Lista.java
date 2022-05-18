@@ -73,7 +73,7 @@ public class Lista {
         int iterador = 1;
         Nodo aux = this.cabecera;
         
-        if(1 < pos && pos < this.longitud() + 1){
+        if(1 <= pos && pos < this.longitud() + 1){
             while(iterador < pos){
                 iterador++;
                 aux = aux.getEnlace();

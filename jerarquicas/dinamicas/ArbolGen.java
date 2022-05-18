@@ -109,7 +109,7 @@ public class ArbolGen {
             } else {
                 encontrado = padreAux(actual.getHijoIzquierdo(), actual, buscado);
                 if (encontrado == null) {
-                    encontrado = padreAux(actual.getHermanoDerecho(), actual, buscado);
+                    encontrado = padreAux(actual.getHermanoDerecho(), padre, buscado);
                 }
             }
         }
@@ -432,8 +432,6 @@ public class ArbolGen {
     }
 
     private int sonFronteraAux(NodoGen nodo, Lista lista, int largoAux) {
-
-        boolean frontera = false;
 
         if (nodo != null) {
             if (nodo.getHijoIzquierdo() == null && lista.localizar(nodo.getElem()) != -1) {
