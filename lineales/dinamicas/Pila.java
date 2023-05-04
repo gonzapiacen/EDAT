@@ -5,7 +5,7 @@
  */
 package lineales.dinamicas;
 
-/**
+/** 
  *
  * @author gonzalo.piacentini
  */
