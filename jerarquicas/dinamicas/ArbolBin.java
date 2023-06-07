@@ -326,23 +326,10 @@ public class ArbolBin {
             obtenerAncestrosAux(this.raiz, elem, ancestros);
             ancestros.eliminar(1);
         }
-//        Object elemPadre = null;
-//        if (!esVacio()) {
-//
-//            do {
-//                elemPadre = padre(elem);
-//                if (elemPadre != null) {
-//                    elem = elemPadre;
-//                    ancestros.insertar(elemPadre, 1);
-//                }
-//            } while (elemPadre != null);
-//
-//        }
         return ancestros;
     }
 
     private void obtenerAncestrosAux(NodoArbol nodo, Object elem, Lista lis) {
-        
 
         if (nodo != null) {
             lis.insertar(nodo.getElem(), 1);
@@ -350,12 +337,13 @@ public class ArbolBin {
                 obtenerAncestrosAux(nodo.getIzquierdo(), elem, lis);
                 if (!lis.recuperar(1).equals(elem)) {
                     obtenerAncestrosAux(nodo.getDerecho(), elem, lis);
-                } if(!lis.recuperar(1).equals(elem)){
+                }
+                if (!lis.recuperar(1).equals(elem)) {
                     lis.eliminar(1);
                 }
             }
         }
-        
+
     }
 
     //obtenerDescendientes
@@ -371,21 +359,21 @@ public class ArbolBin {
         }
         return descendientes;
     }
-    
+
     //clonarInvertido
-    public ArbolBin clonarInvetido(){
-        
+    public ArbolBin clonarInvetido() {
+
         ArbolBin invertido = new ArbolBin();
-        
-        if(!esVacio()){
+
+        if (!esVacio()) {
             invertido.raiz = clonarInvertido(this.raiz);
         }
-        
+
         return invertido;
     }
-    
-    private NodoArbol clonarInvertido(NodoArbol nodo){
-        
+
+    private NodoArbol clonarInvertido(NodoArbol nodo) {
+
         NodoArbol nuevoClon = new NodoArbol(nodo.getElem(), null, null);
 
         if (nodo.getIzquierdo() != null) {
