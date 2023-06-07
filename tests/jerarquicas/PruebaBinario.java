@@ -19,7 +19,7 @@ public class PruebaBinario {
     public static void main(String[] args) {
         
         ArbolBin A1 = new ArbolBin();
-        ArbolBin A2;
+        ArbolBin A2 = new ArbolBin();
         A1.insertar(10, 1, 'I');
         A1.insertar(9, 10, 'I');
         A1.insertar(15, 10, 'D');
@@ -29,6 +29,9 @@ public class PruebaBinario {
         A1.insertar(12, 15, 'I');
         A1.insertar(20, 15, 'D');
         
+        A2.insertar('A', A2, 'I');
+        
+        System.out.println(A2.nivel('A'));
         System.out.println(A1.obtenerAncestros(20).toString());
     }
     
